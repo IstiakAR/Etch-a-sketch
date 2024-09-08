@@ -1,0 +1,129 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: #89CFF0;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  width: 60%;
+  max-width: 880px;
+  height: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.cell {
+  display: flex;
+  flex-shrink: 0;
+  background: white;
+  border: 1px solid black;
+  border-color: rgba(0, 0, 0, 0.05);
+  width: var(--cell-size);
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  cursor: crosshair;
+}
+
+.grid,
+.cell {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 50%;
+  justify-content: center;
+  align-items: space-evenly;
+}
+
+.color {
+  display: flex;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.resize {
+  display: flex;
+  margin-bottom: 5%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#resizeSlider {
+  height: 2px;
+}
+
+#resizeSlider::-moz-range-thumb {
+  background: #FFFDD0;
+}
+
+#resizeSlider:hover {
+  cursor: grab;
+}
+
+
+#resizeSlider:active {
+  cursor: grabbing;
+}
+
+#resizeText {
+  width: 35px;
+  background: #FFFDD0;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button {
+  height: 40px;
+  background: #FFFDD0;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#colorPicker {
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: #FFFDD0;
+}
+
+#rainbow {
+  background: linear-gradient(90deg, red, yellow, purple, green, orange, brown);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+
+.rainbow-active {
+  filter: brightness(0.7);
+}
+
+#random {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-right: 8px;
+}
